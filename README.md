@@ -7,6 +7,7 @@
 - DOM Manipulation
 - Events and Event Handlers
 - Callbacks
+- Fetch
 
 
 ---
@@ -25,12 +26,9 @@ search.
 
 - A user should be able to search for a Pokemon and flip that Pokemon card to see its alternate sprite.
 
-- Two files containing the same information are included: `db.json` and `pokemon.js`. If you've learned `fetch`,
-  consider using `json-server` to spin up a simple RESTful API that will give you your pokemon data:
+- The file `db.json` is your server. Start your server by doing the following in your terminal:
   - `$ npm install -g json-server`
   - `$ json-server --watch db.json`
-
-- If you aren't yet familiar with `fetch`, don't worry. We've included the same data in a file called `pokemon.js`. You should see the `POKEMON` `console.log`ged when you start this app.
 
 ---
 
@@ -39,7 +37,7 @@ search.
 1.  Implement a filter functionality for your Pokemon list.
 2.  Implement a flip functionality on each Pokemon.
 3.  Your search should include pokemon whose names are **not** exact matches
-4.  AS A BONUS, add a way to show users details for a particular pokemon: moves, abilities, etc.
+4.  Add a way to show users details for a particular pokemon: moves, abilities, etc.
 
 ---
 
