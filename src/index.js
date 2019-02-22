@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     div3.append(img)
 
     div1.className = "pokemon-card";
+    div1.addEventListener("click", (e)=>pokemonStatus(e,pokemon))
     div2.className = "pokemon-frame";
     h1.className = "center-text";
     h1.innerText = pokemon.name
@@ -50,32 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
-  
+  const pokemonStatus = (e, pokemon)=>{
+   
+    console.log(pokemon)
+      alert(
+        `${pokemon.name} 
+         Move: ${pokemon.abilities}
+         Type: ${pokemon.types}
+         Height: ${pokemon.height}
+         Move: ${pokemon.moves}
+         Stats: ${pokemon.stats[0].name}
+                    ${pokemon.stats[1].name}
+                    ${pokemon.stats[2].name}
+         Weight: ${pokemon.weight}
+         `
+        )
 
-  const filterPokemon = () => {
-    const search = document.querySelector('#pokemon-search-input');
-    // const form = document.querySelector('#pokemon-search-form');
-    search.addEventListener("input", handleSearchInput)
-    // form.addEventListener("submit", handleFormSubmit)
+
   }
 
-    // const handleFormSubmit = (e) =>{
-    //   e.preventDefault();
-    //   const pokemonData=[];
-    // const search = document.querySelector('#pokemon-search-input');
-    
-    // const allPokemon = document.querySelectorAll(".center-text")
-    //  for(const text of allPokemon){
-    //     if(text.innerText === search.value){
-    //       text.parentElement.parentElement.style.display="block";
-    //     }else{
-    //       text.parentElement.parentElement.style.display="none";
-    //     }
-    // }
-      
-    
-     
-  // }
+    const filterPokemon = () => {
+    const search = document.querySelector('#pokemon-search-input');
+    // const form = document.querySelector('#pokemon-search-form');
+        search.addEventListener("input", handleSearchInput)
+    // form.addEventListener("submit", handleFormSubmit)
+    }
 
   const handleSearchInput= (e) => {
     e.preventDefault();
@@ -93,8 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
         name.parentElement.parentElement.style.display="none";
       }
     })
-
   }
+
+
+  
 
    filterPokemon()
 
