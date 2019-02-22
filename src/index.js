@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const pokemonStatus = (e, pokemon)=>{
-   
-    console.log(pokemon)
       alert(
         `${pokemon.name} 
          Move: ${pokemon.abilities}
